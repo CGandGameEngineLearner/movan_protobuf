@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+import "common.proto";
+
+package MovanServer;
+
+
+
+service SyncServer{
+    rpc allocate_user(AllocateUserRequest) returns (BoolResponse){}
+    rpc remove_user(RemoveUserRequest) returns (BoolResponse) {}
+}
+
+
+service AccountServer {
+    
+}
+
+
+
+message AllocateUserRequest
+{
+    string uid = 1;
+    string token = 2;
+    int32 room_id = 3;
+    bytes crypto_key = 4;
+    bytes crypto_salt = 5;
+}
+
+
+
+
+message RemoveUserRequest
+{
+    string uid = 1;
+    string token = 2;
+    int32 room_id = 3;
+    bytes crypto_key = 4;
+    bytes crypto_salt = 5;
+}
