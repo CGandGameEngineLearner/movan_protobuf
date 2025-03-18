@@ -33,8 +33,4 @@ message AllocateUserRequest
 message RemoveUserRequest
 {
     string uid = 1;
-    string token = 2;
-    int32 room_id = 3;
-    bytes crypto_key = 4;
-    bytes crypto_salt = 5;
 }
