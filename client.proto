@@ -1,3 +1,11 @@
 syntax = "proto3";
 
 package MovanClient;
+
+
+service AccountServer {
+    rpc register(AccountRegisterRequest) returns (BoolResponse) {}
+    rpc register(AccountLoginRequest) returns (BoolResponse) {}
+}
+
+

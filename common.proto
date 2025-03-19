@@ -8,14 +8,14 @@ message BoolResponse {
 }
 
 
-message AccountRegister
+message AccountRegisterRequest
 {
     string account = 1;
     string password = 2;
 }
 
 
-message AccountLogin
+message AccountLoginRequest
 {
     string account = 1;
     string password = 2;

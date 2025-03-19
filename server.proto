@@ -12,9 +12,7 @@ service SyncServer{
 }
 
 
-service AccountServer {
-    
-}
+
 
 
 
