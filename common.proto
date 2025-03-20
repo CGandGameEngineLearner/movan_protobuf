@@ -20,3 +20,10 @@ message AccountLoginRequest
     string account = 1;
     string password = 2;
 }
+
+message AccountLoginResponse
+{
+    bool success = 1;
+    string token = 2;
+    string error_message = 3;
+}
