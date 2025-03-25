@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+// 加密消息的外层结构
+message EncryptedMessage {
+    string uid = 1;                // 用户ID
+    bytes encrypted_data = 2;      // 加密的数据内容
+    bytes encrypted_extra_data = 3; // 加密的额外元数据
+}
+
+// 额外数据（加密前的结构）
+message ExtraData {
+    string proto = 1;       // 协议名称
+    double timestamp = 2;   // 时间戳
+    string token = 3;       // 认证令牌
+}
+
+// 消息解密后的结构（用于内部使用，不直接序列化/反序列化）
+message DecryptedMessage {
+    string uid = 1;         // 用户ID
+    bytes data = 2;         // 原始数据（仍需进一步解析为具体消息类型）
+    ExtraData extra_data = 3; // 解密后的元数据
+}

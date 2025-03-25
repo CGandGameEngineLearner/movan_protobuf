@@ -5,9 +5,6 @@ import "common.proto";
 package MovanClient;
 
 
-service AccountServer {
-    rpc account_register(AccountRegisterRequest) returns (BoolResponse) {}
-    rpc account_login(AccountLoginRequest) returns (AccountLoginResponse) {}
-}
+
 
 

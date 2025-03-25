@@ -6,10 +6,7 @@ package MovanServer;
 
 
 
-service SyncServer{
-    rpc allocate_user(AllocateUserRequest) returns (BoolResponse){}
-    rpc remove_user(RemoveUserRequest) returns (BoolResponse) {}
-}
+
 
 
 
